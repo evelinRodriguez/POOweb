@@ -9,6 +9,10 @@ class cuencas(models.Model):
     direccionp = models.CharField(max_length=1000)
 
 
+    def __str__(self):
+        return self.nombrecuenca
+
+
 class partes(models.Model):
 
     cuencas=models.ForeignKey(cuencas, on_delete=models.CASCADE)
