@@ -1,0 +1,11 @@
+{% if allCuencas %}
+  <h3>Here are all my cuencas </h3>
+
+  <ul>
+     {% for cuencas in allCuencas%}
+       <li><a href="{% url 'detail' cuencas.id %}/">{{cuencas.cuencas_title}}</a></li>
+     {% endfor %}
+  </ul>
+  {% else %}
+       <h3>you dont have any albums</h3>
+  {% endif %}
